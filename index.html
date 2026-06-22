@@ -34,18 +34,33 @@
     <header id="header" class="main-header">
         <div class="header-container">
             <a href="#hero" class="logo-link">
-                <img src="./assets/logo_horizontal.jpg" alt="제주 일번지 로고" class="header-logo">
+                <img src="./assets/logo_small_dark.png" alt="제주 일번지 로고" class="header-logo" id="header-logo-img">
             </a>
             <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="#about" class="nav-link">브랜드 스토리</a></li>
-                    <li><a href="#menu" class="nav-link">대표 메뉴</a></li>
-                    <li><a href="#franchise" class="nav-link">체인점 개설문의</a></li>
-                    <li><a href="#location" class="nav-link">오시는 길</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav_story">브랜드 스토리</a></li>
+                    <li><a href="#menu" class="nav-link" data-i18n="nav_menu">대표 메뉴</a></li>
+                    <li><a href="#franchise" class="nav-link" data-i18n="nav_franchise">체인점 개설문의</a></li>
+                    <li><a href="#location" class="nav-link" data-i18n="nav_location">오시는 길</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="#franchise" class="btn btn-primary btn-sm">가맹 문의</a>
+                <!-- Theme Toggle & Language Picker Dropdown -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="테마 전환">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="lang-select-container">
+                    <i class="fa-solid fa-globe lang-icon"></i>
+                    <select id="lang-select" class="lang-select" aria-label="언어 선택">
+                        <option value="ko">KO</option>
+                        <option value="en">EN</option>
+                        <option value="ja">JA</option>
+                        <option value="zh">ZH</option>
+                        <option value="ru">RU</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <a href="#franchise" class="btn btn-primary btn-sm" data-i18n="nav_franchise_btn">가맹 문의</a>
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="메뉴 열기">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -59,18 +74,18 @@
     <section id="hero" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="hero-subtitle fade-in">제주의 자연을 돌판 초벌로 담아내다</span>
-            <h1 class="hero-title fade-in delay-1">
+            <span class="hero-subtitle fade-in" data-i18n="hero_subtitle">제주의 자연을 돌판 초벌로 담아내다</span>
+            <h1 class="hero-title fade-in delay-1" data-i18n="hero_title">
                 명품 제주고기<br>
                 <span>초벌구이 전문점</span>
             </h1>
-            <p class="hero-desc fade-in delay-2">
+            <p class="hero-desc fade-in delay-2" data-i18n="hero_desc">
                 뜨거운 돌판 위에서 육즙을 꽉 가둔 제주 오겹살과 특수부위의 진수.<br>
                 제주 일번지 1호점에서 맛의 신세계를 경험해 보세요.
             </p>
             <div class="hero-buttons fade-in delay-3">
-                <a href="#menu" class="btn btn-primary btn-lg">메뉴 보기</a>
-                <a href="#franchise" class="btn btn-outline btn-lg">체인점 개설 안내</a>
+                <a href="#menu" class="btn btn-primary btn-lg" data-i18n="hero_btn_menu">메뉴 보기</a>
+                <a href="#franchise" class="btn btn-outline btn-lg" data-i18n="hero_btn_franchise">체인점 개설 안내</a>
             </div>
         </div>
         <div class="hero-scroll-indicator">
@@ -93,39 +108,39 @@
                     </div>
                     <div class="about-badge">
                         <span class="badge-num">1</span>
-                        <span class="badge-text">호점 본점<br>인천 구월동</span>
+                        <span class="badge-text" data-i18n="about_badge">호점 본점<br>인천 구월동</span>
                     </div>
                 </div>
                 <div class="about-text-wrapper">
-                    <span class="section-tag">BRAND STORY</span>
-                    <h2 class="section-title">제주의 맛과 정취를 그대로,<br><span>초벌구이의 명가 제주 일번지</span></h2>
-                    <p class="about-para">
+                    <span class="section-tag" data-i18n="story_tag">BRAND STORY</span>
+                    <h2 class="section-title" data-i18n="story_title">제주의 맛과 정취를 그대로,<br><span>초벌구이의 명가 제주 일번지</span></h2>
+                    <p class="about-para" data-i18n="story_desc1">
                         제주 일번지는 오직 청정 제주에서 자라난 명품 돼지고기만을 엄선하여 고유의 고소한 풍미와 쫄깃한 식감을 고스란히 손님상에 올립니다.
                     </p>
-                    <p class="about-para">
-                        가장 맛있는 순간을 선사하기 위해 고집하는 <strong>'참숯 돌판 초벌구이 시스템'</strong>은 고열로 고기 겉면을 빠르게 익혀 두툼한 고기 속에 육즙을 가두고, 돌판 특유의 일정한 열전달로 겉은 바삭하고 속은 촉촉하게 구워냅니다.
+                    <p class="about-para" data-i18n="story_desc2">
+                        가장 맛있는 순간을 선사하기 위해 고집하는 <strong>'참숯 돌판 초벌구이 시스템'</strong>은 고열로 고기 겉면을 빠르게 익혀 두툼한 고기 속에 육즙을 가두고, 돌판 특유 of 일정한 열전달로 겉은 바삭하고 속은 촉촉하게 구워냅니다.
                     </p>
                     
                     <div class="core-values">
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-cloud-sun"></i></div>
                             <div class="value-text">
-                                <h3>청정 제주 원육</h3>
-                                <p>엄격한 품질 관리로 공수하는 1등급 제주산 돈육</p>
+                                <h3 data-i18n="value_title1">청정 제주 원육</h3>
+                                <p data-i18n="value_desc1">엄격한 품질 관리로 공수하는 1등급 제주산 돈육</p>
                             </div>
                         </div>
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-fire"></i></div>
                             <div class="value-text">
-                                <h3>돌판 초벌 시스템</h3>
-                                <p>육즙 보존과 맛의 극대화를 위한 일정한 온도 제어 돌판 초벌 공정</p>
+                                <h3 data-i18n="value_title2">돌판 초벌 시스템</h3>
+                                <p data-i18n="value_desc2">참숯가마에서 1차 초벌하여 육즙을 완벽 봉인한 고기</p>
                             </div>
                         </div>
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
                             <div class="value-text">
-                                <h3>차별화된 특수부위</h3>
-                                <p>덜미살, 까치살, 천겹살 등 희소성 높은 명품 부위 제공</p>
+                                <h3 data-i18n="value_title3">차별화된 특수부위</h3>
+                                <p data-i18n="value_desc3">천겹살, 덜미살 등 제주 일번지만의 엄선 시그니처 컷</p>
                             </div>
                         </div>
                     </div>
@@ -139,28 +154,28 @@
         <div class="feature-container">
             <div class="feature-grid">
                 <div class="feature-content scroll-reveal">
-                    <span class="feature-tag">WHY PRE-GRILLED ON STONE?</span>
-                    <h2 class="feature-title">돌판 초벌구이가 만드는<br>압도적인 맛의 차이</h2>
+                    <span class="feature-tag" data-i18n="feature_tag">WHY PRE-GRILLED ON STONE?</span>
+                    <h2 class="feature-title" data-i18n="feature_title">돌판 초벌구이가 만드는<br>압도적인 맛의 차이</h2>
                     <div class="feature-steps">
                         <div class="step-card">
                             <div class="step-num">01</div>
                             <div class="step-body">
-                                <h3>육즙 밀봉 (Locking Juices)</h3>
-                                <p>화력 높은 전용 초벌 돌판에서 겉면을 순식간에 구워, 씹을 때 퍼지는 풍부한 육즙을 그대로 살려냅니다.</p>
+                                <h3 data-i18n="step1_title">육즙 밀봉 (Locking Juices)</h3>
+                                <p data-i18n="step1_desc">화력 높은 전용 초벌 돌판에서 겉면을 순식간에 구워, 씹을 때 퍼지는 풍부한 육즙을 그대로 살려냅니다.</p>
                             </div>
                         </div>
                         <div class="step-card">
                             <div class="step-num">02</div>
                             <div class="step-body">
-                                <h3>균일한 열전달 (Even Cooking)</h3>
-                                <p>돌판 특유의 원적외선 방출과 뛰어난 열 보존력으로 고기 내부까지 속속들이 부드럽게 익혀줍니다.</p>
+                                <h3 data-i18n="step2_title">균일한 열전달 (Even Cooking)</h3>
+                                <p data-i18n="step2_desc">돌판 특유의 원적외선 방출과 뛰어난 열 보존력으로 고기 내부까지 속속들이 부드럽게 익혀줍니다.</p>
                             </div>
                         </div>
                         <div class="step-card">
                             <div class="step-num">03</div>
                             <div class="step-body">
-                                <h3>신속하고 간편한 식사 (Fast & Clean)</h3>
-                                <p>주방에서 80% 이상 초벌되어 나오기 때문에 매장 테이블에서는 연기와 냄새 없이 가볍게 익혀 바로 드실 수 있습니다.</p>
+                                <h3 data-i18n="step3_title">신속하고 간편한 식사 (Fast & Clean)</h3>
+                                <p data-i18n="step3_desc">주방에서 80% 이상 초벌되어 나오기 때문에 매장 테이블에서는 연기와 냄새 없이 가볍게 익혀 바로 드실 수 있습니다.</p>
                             </div>
                         </div>
                     </div>
@@ -169,8 +184,8 @@
                     <div class="visual-card">
                         <div class="card-overlay"></div>
                         <div class="visual-content">
-                            <h3>"테이블 회전은 2배 빠르게,<br>고객 만족은 10배 깊게"</h3>
-                            <p>이것이 제주 일번지가 자랑하는 가맹점 운영 효율성의 비결입니다.</p>
+                            <h3 data-i18n="feature_quote_text">"테이블 회전은 2배 빠르게,<br>고객 만족은 10배 깊게"</h3>
+                            <p data-i18n="feature_quote_sub">이것이 제주 일번지가 자랑하는 가맹점 운영 효율성의 비결입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -182,18 +197,18 @@
     <section id="menu" class="menu-section scroll-reveal">
         <div class="section-container">
             <div class="section-header-center">
-                <span class="section-tag">OUR MENU</span>
-                <h2 class="section-title">제주 일번지의 특별한 차림표</h2>
-                <p class="section-desc">청정 제주 고기와 깊은 맛의 사이드 메뉴, 그리고 어울리는 반주까지 정성을 담아 대접합니다.</p>
+                <span class="section-tag" data-i18n="menu_tag">OUR MENU</span>
+                <h2 class="section-title" data-i18n="menu_title">제주 일번지의 특별한 차림표</h2>
+                <p class="section-desc" data-i18n="menu_desc">청정 제주 고기와 깊은 맛의 사이드 메뉴, 그리고 어울리는 반주까지 정성을 담아 대접합니다.</p>
             </div>
             
             <!-- Menu Navigation Tabs -->
             <div class="menu-tabs-wrapper">
                 <ul class="menu-tabs" id="menu-tabs">
-                    <li class="tab-item active" data-tab="tab-jeju">제주 명품고기</li>
-                    <li class="tab-item" data-tab="tab-set">세트 메뉴</li>
-                    <li class="tab-item" data-tab="tab-side">사이드 식사</li>
-                    <li class="tab-item" data-tab="tab-drink">주류 & 음료</li>
+                    <li class="tab-item active" data-tab="tab-jeju" data-i18n="tab_single">제주 명품고기</li>
+                    <li class="tab-item" data-tab="tab-set" data-i18n="tab_set">세트 메뉴</li>
+                    <li class="tab-item" data-tab="tab-side" data-i18n="tab_side">사이드 식사</li>
+                    <li class="tab-item" data-tab="tab-drink" data-i18n="tab_drink">주류 & 음료</li>
                 </ul>
             </div>
 
@@ -209,10 +224,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 오겹살 <span class="badge badge-popular">추천</span></h3>
-                                    <span class="menu-item-price">15,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_ogyeop_title">제주 오겹살 <span class="badge badge-popular">추천</span></h3>
+                                    <span class="menu-item-price">15,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">껍데기층의 쫀득함과 고소한 살코기의 완벽한 하모니 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_ogyeop_desc">껍데기층의 쫀득함과 고소한 살코기의 완벽한 하모니 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -221,10 +236,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 목살</h3>
-                                    <span class="menu-item-price">15,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_moksal_title">제주 목살</h3>
+                                    <span class="menu-item-price">15,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">부드러우면서도 담백한 육질에 터지는 풍부한 육즙 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_moksal_desc">부드러우면서도 담백한 육질에 터지는 풍부한 육즙 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -233,10 +248,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 덜미살 <span class="badge badge-special">특수부위</span></h3>
-                                    <span class="menu-item-price">14,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_deolmi_title">제주 덜미살 <span class="badge badge-special">특수부위</span></h3>
+                                    <span class="menu-item-price">14,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">돼지 목덜미 부위로 꼬들꼬들하고 씹을수록 고소한 매력 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_deolmi_desc">돼지 목덜미 부위로 꼬들꼬들하고 씹을수록 고소한 매력 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -245,10 +260,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 까치살 <span class="badge badge-special">특수부위</span></h3>
-                                    <span class="menu-item-price">14,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_kkachi_title">제주 까치살 <span class="badge badge-special">특수부위</span></h3>
+                                    <span class="menu-item-price">14,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">한 마리에서 극소량만 나오는 매우 연하고 부드러운 살코기 부위 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_kkachi_desc">한 마리에서 극소량만 나오는 매우 연하고 부드러운 살코기 부위 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -257,10 +272,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 천겹살 <span class="badge badge-special">특수부위</span></h3>
-                                    <span class="menu-item-price">14,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_chunkyup_title">제주 천겹살 <span class="badge badge-special">특수부위</span></h3>
+                                    <span class="menu-item-price">14,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">천 겹의 마블링이 살아있는 아삭하고 고소한 항정살 부위 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_chunkyup_desc">천 겹의 마블링이 살아있는 아삭하고 고소한 항정살 부위 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -269,10 +284,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주 돈마호크 <span class="badge badge-hit">인기</span></h3>
-                                    <span class="menu-item-price">14,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_donma_title">제주 돈마호크 <span class="badge badge-hit">인기</span></h3>
+                                    <span class="menu-item-price">40,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">등심, 갈비뼈, 비계가 어우러져 압도적인 비주얼을 자랑하는 도끼고기 (400g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_donma_desc">등심, 갈비뼈, 비계가 어우러져 압도적인 비주얼을 자랑하는 도끼고기 (400g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -281,10 +296,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">냉동 삼겹살 <span class="badge badge-import">수입산</span></h3>
-                                    <span class="menu-item-price">13,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_naengsam_title">냉동 삼겹살 <span class="badge badge-import">수입산</span></h3>
+                                    <span class="menu-item-price">13,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">부담 없이 즐기기 좋은 급냉 삼겹살 (200g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_naengsam_desc">부담 없이 즐기기 좋은 급냉 삼겹살 (200g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
@@ -293,10 +308,10 @@
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">갈비살 <span class="badge badge-import">수입산</span></h3>
-                                    <span class="menu-item-price">15,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_galbi_title">갈비살 <span class="badge badge-import">수입산</span></h3>
+                                    <span class="menu-item-price">16,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">부드러운 소 갈비 부위의 고소한 맛 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_galbi_desc">부드러운 소 갈비 부위의 고소한 맛 (150g)</p>
                             </div>
                         </div>
                     </div>
@@ -307,38 +322,38 @@
                     <div class="menu-grid">
                         <div class="menu-item-card set-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="./assets/menu_photo_1.jpg" alt="반마리세트 A" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="반마리세트 A" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">반마리세트 A <span class="badge badge-popular">추천</span></h3>
-                                    <span class="menu-item-price">45,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_set_a_title">반마리세트 A <span class="badge badge-popular">추천</span></h3>
+                                    <span class="menu-item-price">45,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">구성이 알찬 제주 고기 한판<br><strong>오겹살 + 덜미살 + 까치살</strong> 조합 (총 500g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_set_a_desc">구성이 알찬 제주 고기 한판<br><strong>오겹살 + 덜미살 + 까치살</strong> 조합 (총 500g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card set-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="./assets/menu_photo_2.jpg" alt="반마리세트 B" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="반마리세트 B" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">반마리세트 B</h3>
-                                    <span class="menu-item-price">45,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_set_b_title">반마리세트 B</h3>
+                                    <span class="menu-item-price">45,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">부드럽고 쫄깃한 식감의 절묘함<br><strong>목살 + 천겹살 + 까치살</strong> 조합 (총 500g)</p>
+                                <p class="menu-item-desc" data-i18n="pork_set_b_desc">부드럽고 쫄깃한 식감의 절묘함<br><strong>목살 + 천겹살 + 까치살</strong> 조합 (총 500g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card set-card broad-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="./assets/menu_photo_3.jpg" alt="한마리세트" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="한마리세트" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">한마리세트 <span class="badge badge-hit">인기</span></h3>
-                                    <span class="menu-item-price">88,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="pork_set_all_title">한마리세트 <span class="badge badge-hit">인기</span></h3>
+                                    <span class="menu-item-price">88,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">제주 일번지의 모든 시그니처 부위를 한 테이블에!<br><strong>오겹살 + 덜미살 + 천겹살 + 목살 + 까치살</strong> 모둠 조합 (총 1kg)</p>
+                                <p class="menu-item-desc" data-i18n="pork_set_all_desc">제주 일번지의 모든 시그니처 부위를 한 테이블에!<br><strong>오겹살 + 덜미살 + 천겹살 + 목살 + 까치살</strong> 모둠 조합 (총 1kg)</p>
                             </div>
                         </div>
                     </div>
@@ -349,122 +364,122 @@
                     <div class="menu-grid">
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="./assets/menu_photo_4.jpg" alt="한우육회 A++" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="한우육회 A++" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">한우육회 A++</h3>
-                                    <span class="menu-item-price">18,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_beef_raw_title">한우육회 A++</h3>
+                                    <span class="menu-item-price">18,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">신선하고 찰진 투뿔 한우의 부드럽고 달콤한 육회 (150g)</p>
+                                <p class="menu-item-desc" data-i18n="side_beef_raw_desc">신선하고 찰진 투뿔 한우의 부드럽고 달콤한 육회 (150g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?auto=format&fit=crop&w=150&q=80" alt="통 오징어" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="통 오징어" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">통 오징어</h3>
-                                    <span class="menu-item-price">13,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_squid_title">통 오징어</h3>
+                                    <span class="menu-item-price">13,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">불판 위에 노릇하게 구워 함께 곁들이는 통통한 오징어 한 마리</p>
+                                <p class="menu-item-desc" data-i18n="side_squid_desc">불판 위에 노릇하게 구워 함께 곁들이는 통통한 오징어 한 마리</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1527324688151-0e627063f2b1?auto=format&fit=crop&w=150&q=80" alt="벌집 껍데기" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="벌집 껍데기" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">벌집 껍데기</h3>
-                                    <span class="menu-item-price">12,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_skin_title">벌집 껍데기</h3>
+                                    <span class="menu-item-price">12,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">벌집 칼집으로 겉바속촉 극대화! 쫀득달달 콜라겐 껍데기 (200g)</p>
+                                <p class="menu-item-desc" data-i18n="side_skin_desc">벌집 칼집으로 겉바속촉 극대화! 쫀득달달 콜라겐 껍데기 (200g)</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=150&q=80" alt="차돌된장찌개 & 술밥" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="차돌된장찌개 & 술밥" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">차돌된장찌개 & 술밥</h3>
-                                    <span class="menu-item-price">8,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_doenjang_beef_title">차돌된장찌개 & 술밥</h3>
+                                    <span class="menu-item-price">8,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">고소한 차돌박이를 넣은 진한 된장찌개에 밥을 말아 끓인 든든한 안주용 술밥</p>
+                                <p class="menu-item-desc" data-i18n="side_doenjang_beef_desc">고소한 차돌박이를 넣은 진한 된장찌개에 밥을 말아 끓인 든든한 안주용 술밥</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=150&q=80" alt="제주생고기 김치찌개" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="제주생고기 김치찌개" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">제주생고기 김치찌개</h3>
-                                    <span class="menu-item-price">7,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_kimchi_fresh_title">제주생고기 김치찌개</h3>
+                                    <span class="menu-item-price">7,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">제주산 돼지고기를 듬뿍 썰어 넣어 칼칼하고 진한 원조 김치찌개</p>
+                                <p class="menu-item-desc" data-i18n="side_kimchi_fresh_desc">제주산 돼지고기를 듬뿍 썰어 넣어 칼칼하고 진한 원조 김치찌개</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=150&q=80" alt="물냉면 / 비빔냉면" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="물냉면 / 비빔냉면" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">물냉면 / 비빔냉면</h3>
-                                    <span class="menu-item-price">7,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_noodles_title">물냉면 / 비빔냉면</h3>
+                                    <span class="menu-item-price">7,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">기름진 입안을 개운하게 씻어주는 살얼음 동동 냉면</p>
+                                <p class="menu-item-desc" data-i18n="side_noodles_desc">기름진 입안을 개운하게 씻어주는 살얼음 동동 냉면</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=150&q=80" alt="폭탄 계란찜" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="폭탄 계란찜" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">폭탄 계란찜 <span class="desc-meta">(파/치즈 선택 가능)</span></h3>
-                                    <span class="menu-item-price">6,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_egg_title">폭탄 계란찜 <span class="desc-meta">(파/치즈 선택 가능)</span></h3>
+                                    <span class="menu-item-price">6,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">뚝배기 위로 터질 듯이 솟아오른 부드러운 명품 계란찜</p>
+                                <p class="menu-item-desc" data-i18n="side_egg_desc">뚝배기 위로 터질 듯이 솟아오른 부드러운 명품 계란찜</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1486299267070-8382e21b471a?auto=format&fit=crop&w=150&q=80" alt="구워먹는 치즈" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="구워먹는 치즈" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">구워먹는 치즈</h3>
-                                    <span class="menu-item-price">6,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_cheese_title">구워먹는 치즈</h3>
+                                    <span class="menu-item-price">6,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">달콤하고 짭조름하게 그릴 위에서 구워 먹는 별미 모짜렐라 치즈</p>
+                                <p class="menu-item-desc" data-i18n="side_cheese_desc">달콤하고 짭조름하게 그릴 위에서 구워 먹는 별미 모짜렐라 치즈</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=150&q=80" alt="라면" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="라면" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">라면 <span class="desc-meta">(마늘&치즈 추가시 +1,000원)</span></h3>
-                                    <span class="menu-item-price">4,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_ramen_title">라면 <span class="desc-meta">(마늘&치즈 추가시 +1,000원)</span></h3>
+                                    <span class="menu-item-price">4,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">화력 좋은 센 불로 끓여내어 면발이 꼬들꼬들하고 시원한 양은 냄비 라면</p>
+                                <p class="menu-item-desc" data-i18n="side_ramen_desc">화력 좋은 센 불로 끓여내어 면발이 꼬들꼬들하고 시원한 양은 냄비 라면</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=150&q=80" alt="셀프 볶음밥" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="셀프 볶음밥" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">셀프 볶음밥 <span class="desc-meta">(치즈 추가시 +1,000원)</span></h3>
-                                    <span class="menu-item-price">4,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="side_fried_rice_self_title">셀프 볶음밥 <span class="desc-meta">(치즈 추가시 +1,000원)</span></h3>
+                                    <span class="menu-item-price">4,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">고기를 구워 먹은 돌판에 직접 볶아 먹는 한국인의 필수 마무리 디저트</p>
+                                <p class="menu-item-desc" data-i18n="side_fried_rice_self_desc">고기를 구워 먹은 돌판에 직접 볶아 먹는 한국인의 필수 마무리 디저트</p>
                             </div>
                         </div>
                     </div>
@@ -475,74 +490,74 @@
                     <div class="menu-grid">
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?auto=format&fit=crop&w=150&q=80" alt="소주 / 생맥주" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="소주 / 생맥주" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">소주 / 생맥주</h3>
-                                    <span class="menu-item-price">4,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_soju_draft_title">소주 / 생맥주</h3>
+                                    <span class="menu-item-price">4,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">생맥주 시원한 500cc 잔 기준</p>
+                                <p class="menu-item-desc" data-i18n="drink_soju_draft_desc">생맥주 시원한 500cc 잔 기준</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=150&q=80" alt="병맥주" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="병맥주" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">병맥주</h3>
-                                    <span class="menu-item-price">5,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_beer_bottle_title">병맥주</h3>
+                                    <span class="menu-item-price">5,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">카스, 테라 등 청량한 병맥주</p>
+                                <p class="menu-item-desc" data-i18n="drink_beer_bottle_desc">카스, 테라 등 청량한 병맥주</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?auto=format&fit=crop&w=150&q=80" alt="한라산 / 청하" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="한라산 / 청하" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">한라산 / 청하</h3>
-                                    <span class="menu-item-price">6,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_hallsan_cheongha_title">한라산 / 청하</h3>
+                                    <span class="menu-item-price">6,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">제주의 맑은 정수 한라산 소주(21도/16도)와 깔끔한 청하</p>
+                                <p class="menu-item-desc" data-i18n="drink_hallsan_cheongha_desc">제주의 맑은 정수 한라산 소주(21도/16도)와 깔끔한 청하</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=150&q=80" alt="복분자" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="복분자" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">복분자</h3>
-                                    <span class="menu-item-price">15,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_bokbunja_title">복분자</h3>
+                                    <span class="menu-item-price">15,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">고기의 맛을 돋워주는 달콤하고 묵직한 오리지널 복분자주</p>
+                                <p class="menu-item-desc" data-i18n="drink_bokbunja_desc">고기의 맛을 돋워주는 달콤하고 묵직한 오리지널 복분자주</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1569529467266-0910f135677d?auto=format&fit=crop&w=150&q=80" alt="일품 진로" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="일품 진로" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">일품 진로</h3>
-                                    <span class="menu-item-price">25,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_ilpum_jinro_title">일품 진로</h3>
+                                    <span class="menu-item-price">25,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">품격 있는 자리를 위한 프리미엄 정통 증류식 소주</p>
+                                <p class="menu-item-desc" data-i18n="drink_ilpum_jinro_desc">품격 있는 자리를 위한 프리미엄 정통 증류식 소주</p>
                             </div>
                         </div>
                         <div class="menu-item-card">
                             <div class="menu-item-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=150&q=80" alt="음료수" class="menu-item-img">
+                                <img src="./assets/preparing.png" alt="음료수" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3 class="menu-item-name">음료수</h3>
-                                    <span class="menu-item-price">2,000원</span>
+                                    <h3 class="menu-item-name" data-i18n="drink_soda_common_title">음료수</h3>
+                                    <span class="menu-item-price">2,000<span data-i18n="price_unit">원</span></span>
                                 </div>
-                                <p class="menu-item-desc">콜라, 사이다, 환타, 웰치스 등</p>
+                                <p class="menu-item-desc" data-i18n="drink_soda_common_desc">콜라, 사이다, 환타, 웰치스 등</p>
                             </div>
                         </div>
                     </div>
@@ -553,7 +568,7 @@
             <!-- Action buttons for Menu Board View -->
             <div class="menu-board-cta">
                 <button id="btn-view-board" class="btn btn-secondary btn-md">
-                    <i class="fa-solid fa-image"></i> 원본 매장 메뉴판 보기
+                    <i class="fa-solid fa-image"></i> <span data-i18n="btn_view_menu_board">원본 매장 메뉴판 보기</span>
                 </button>
             </div>
         </div>
@@ -567,9 +582,9 @@
                 
                 <!-- Left: Business Pitch -->
                 <div class="franchise-pitch">
-                    <span class="section-tag tag-light">FRANCHISE INQUIRY</span>
-                    <h2 class="section-title">제주 일번지와 함께할<br>성공 파트너(가맹점)를 모십니다.</h2>
-                    <p class="pitch-lead">
+                    <span class="section-tag tag-light" data-i18n="franchise_tag">FRANCHISE INQUIRY</span>
+                    <h2 class="section-title" data-i18n="franchise_title">제주 일번지와 함께할<br>성공 파트너(가맹점)를 모십니다.</h2>
+                    <p class="pitch-lead" data-i18n="fran_lead">
                         외식 창업, 누구나 시작할 수 있지만 누구나 성공할 수는 없습니다.<br>
                         검증된 1호점 본점의 노하우와 압도적 효율성으로 동행합니다.
                     </p>
@@ -578,29 +593,29 @@
                         <div class="benefit-box">
                             <div class="benefit-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
                             <div class="benefit-text">
-                                <h3>소자본 창업 & 고수익 실현</h3>
-                                <p>효율적인 매장 레이아웃과 높은 마진 구조로 조기 회수 지원</p>
+                                <h3 data-i18n="fran_benefit_title1">소자본 창업 & 고수익 실현</h3>
+                                <p data-i18n="fran_benefit_desc1">효율적인 매장 레이아웃과 높은 마진 구조로 조기 회수 지원</p>
                             </div>
                         </div>
                         <div class="benefit-box">
                             <div class="benefit-icon"><i class="fa-solid fa-people-carry-box"></i></div>
                             <div class="benefit-text">
-                                <h3>초간편 주방 오퍼레이션</h3>
-                                <p>고도의 기술이 필요 없는 단순한 주방 조리 시스템과 초벌화 설비 최적화</p>
+                                <h3 data-i18n="fran_benefit_title2">초간편 주방 오퍼레이션</h3>
+                                <p data-i18n="fran_benefit_desc2">고도의 기술이 필요 없는 단순한 주방 조리 시스템과 초벌화 설비 최적화</p>
                             </div>
                         </div>
                         <div class="benefit-box">
                             <div class="benefit-icon"><i class="fa-solid fa-truck-moving"></i></div>
                             <div class="benefit-text">
-                                <h3>물류 직배송 체계 구축</h3>
-                                <p>제주 본토 협력 공장에서 손질된 명품 고기를 최적 온도 그대로 매장까지 안정 공급</p>
+                                <h3 data-i18n="fran_benefit_title3">물류 직배송 체계 구축</h3>
+                                <p data-i18n="fran_benefit_desc3">제주 본토 협력 공장에서 손질된 명품 고기를 최적 온도 그대로 매장까지 안정 공급</p>
                             </div>
                         </div>
                         <div class="benefit-box">
                             <div class="benefit-icon"><i class="fa-solid fa-user-gear"></i></div>
                             <div class="benefit-text">
-                                <h3>1:1 오픈 밀착 교육</h3>
-                                <p>상권 분석부터 점포 오픈, 온/오프라인 마케팅까지 본사 대표가 직접 전수</p>
+                                <h3 data-i18n="fran_benefit_title4">1:1 오픈 밀착 교육</h3>
+                                <p data-i18n="fran_benefit_desc4">상권 분석부터 점포 오픈, 온/오프라인 마케팅까지 본사 대표가 직접 전수</p>
                             </div>
                         </div>
                     </div>
@@ -609,51 +624,52 @@
                 <!-- Right: Inquiry Form Card -->
                 <div class="franchise-form-container">
                     <div class="form-card">
-                        <h3>가맹상담 및 창업 안내 문의</h3>
-                        <p class="form-sub">성공 창업의 시작, 꼼꼼하게 안내해 드리겠습니다.</p>
+                        <h3 data-i18n="form_legend">가맹상담 및 창업 안내 문의</h3>
+                        <p class="form-sub" data-i18n="form_sub">성공 창업의 시작, 꼼꼼하게 안내해 드리겠습니다.</p>
                         
-                        <form id="franchise-form" novalidate>
+                        <form id="franchise-form" name="franchise-inquiry" method="POST" data-netlify="true" novalidate>
+                            <input type="hidden" name="form-name" value="franchise-inquiry" />
                             <div class="form-group">
-                                <label for="form-name">성함 / 신청자명 <span class="required">*</span></label>
+                                <label for="form-name"><span data-i18n="form_label_name">성함 / 신청자명</span> <span class="required">*</span></label>
                                 <input type="text" id="form-name" name="name" placeholder="상담받으실 성함을 입력해 주세요." required>
-                                <span class="error-msg" id="error-name">성함을 입력해 주세요.</span>
+                                <span class="error-msg" id="error-name" data-i18n="form_valid_name">성함을 입력해 주세요.</span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-phone">연락처 <span class="required">*</span></label>
+                                <label for="form-phone"><span data-i18n="form_label_phone">연락처</span> <span class="required">*</span></label>
                                 <input type="tel" id="form-phone" name="phone" placeholder="예: 010-1234-5678" required>
-                                <span class="error-msg" id="error-phone">올바른 연락처를 입력해 주세요.</span>
+                                <span class="error-msg" id="error-phone" data-i18n="form_valid_phone">올바른 연락처를 입력해 주세요.</span>
                             </div>
                             
                             <div class="form-group-row">
                                 <div class="form-group">
-                                    <label for="form-location">희망 창업 지역</label>
+                                    <label for="form-location" data-i18n="form_label_region">희망 창업 지역</label>
                                     <input type="text" id="form-location" name="location" placeholder="예: 인천 남동구">
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-budget">예상 창업 비용</label>
+                                    <label for="form-budget" data-i18n="form_label_budget">예상 창업 비용</label>
                                     <select id="form-budget" name="budget">
-                                        <option value="">선택해 주세요</option>
-                                        <option value="under_5k">5천만원 미만</option>
-                                        <option value="5k_to_10k">5천만원 이상 ~ 1억원 미만</option>
-                                        <option value="10k_to_15k">1억원 이상 ~ 1억 5천만원 미만</option>
-                                        <option value="over_15k">1억 5천만원 이상</option>
+                                        <option value="" data-i18n="form_opt_budget_select">선택해 주세요</option>
+                                        <option value="under_5k" data-i18n="form_opt_budget1">5천만원 미만</option>
+                                        <option value="5k_to_10k" data-i18n="form_opt_budget2">5천만원 이상 ~ 1억원 미만</option>
+                                        <option value="10k_to_15k" data-i18n="form_opt_budget3">1억원 이상 ~ 1억 5천만원 미만</option>
+                                        <option value="over_15k" data-i18n="form_opt_budget4">1억 5천만원 이상</option>
                                     </select>
                                 </div>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-message">문의 및 요청사항</label>
+                                <label for="form-message" data-i18n="form_label_message">문의 및 요청사항</label>
                                 <textarea id="form-message" name="message" rows="4" placeholder="점포 소유 여부, 창업 시기 등 궁금하신 사항을 자유롭게 적어주세요."></textarea>
                             </div>
                             
                             <div class="form-group-checkbox">
                                 <input type="checkbox" id="form-agree" name="agree" required>
-                                <label for="form-agree">개인정보 수집 및 동의에 동의합니다. <span class="required">*</span></label>
-                                <span class="error-msg" id="error-agree">개인정보 수집 동의에 체크해 주세요.</span>
+                                <label for="form-agree" data-i18n="form_agree_txt">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+                                <span class="error-msg" id="error-agree" data-i18n="form_valid_agree">개인정보 수집 동의에 체크해 주세요.</span>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit" data-i18n="form_submit_btn">
                                 가맹 문의 신청하기 <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
                             </button>
                         </form>
@@ -671,46 +687,36 @@
                 
                 <!-- Left: Info -->
                 <div class="location-info">
-                    <span class="section-tag">CONTACT & LOCATION</span>
-                    <h2 class="section-title">제주 일번지 1호점<br>본점 찾아오시는 길</h2>
+                    <span class="section-tag" data-i18n="loc_tag">CONTACT & LOCATION</span>
+                    <h2 class="section-title" data-i18n="loc_title">제주 일번지 1호점<br>본점 찾아오시는 길</h2>
                     
                     <div class="info-list">
                         <div class="info-item">
                             <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
                             <div class="info-detail">
-                                <h3>도로명 주소</h3>
-                                <p>인천광역시 남동구 독점로 25 1층</p>
-                                <p class="sub-addr">(지번 주소: 인천 남동구 구월동 1202-2)</p>
+                                <h3 data-i18n="loc_address_title">도로명 주소</h3>
+                                <p data-i18n="loc_address_val">인천광역시 남동구 독점로 25 1층 (지번 주소: 인천 남동구 구월동 1202-2)</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
                             <div class="info-detail">
-                                <h3>예약 및 문의 전화</h3>
-                                <p class="tel-number"><a href="tel:0507-1399-1413">0507-1399-1413</a></p>
-                                <p class="sub-addr">(가맹점 개설 문의는 상단 폼이나 본사 전화로 연락 바람)</p>
+                                <h3 data-i18n="loc_tel_title">예약 및 문의 전화</h3>
+                                <p class="tel-number"><a href="tel:0507-1399-1413" data-i18n="loc_tel_val">0507-1399-1413</a></p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
                             <div class="info-detail">
-                                <h3>영업시간 안내</h3>
-                                <p>매일 16:00 ~ 24:00</p>
-                                <p class="last-order">라스트 오더: 23:30</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                            <div class="info-detail">
-                                <h3>대중교통 이용 안내</h3>
-                                <p>인천 2호선 석천사거리역 4번 출구 도보 10분 / 1호선 예술회관역 2번 출구 도보 12분 (길병원 본관 옆)</p>
+                                <h3 data-i18n="loc_hours_title">영업시간 안내</h3>
+                                <p data-i18n="loc_hours_val">매일 11:30 ~ 23:00 (라스트 오더 22:00)</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="map-action-buttons">
                         <a href="https://naver.me/x2YOXKvq" target="_blank" rel="noopener noreferrer" class="btn btn-naver-map">
-                            <i class="fa-solid fa-location-arrow"></i> 네이버 지도로 열기 (길찾기)
+                            <i class="fa-solid fa-location-arrow"></i> <span data-i18n="btn_open_naver">네이버 지도로 열기 (길찾기)</span>
                         </a>
                     </div>
                 </div>
@@ -720,7 +726,7 @@
                     <div class="mock-map-box">
                         <div class="mock-map-header">
                             <i class="fa-solid fa-location-dot" style="color: #EF4444; margin-right: 8px;"></i>
-                            <span>인천 남동구 독점로 25 (제주 일번지 1호점)</span>
+                            <span data-i18n="map_header_title">인천 남동구 독점로 25 (제주 일번지 1호점)</span>
                         </div>
                         <div class="mock-map-visual">
                             <!-- SVG Vector Map Layer (800x500 Coordinate System) -->
@@ -857,7 +863,7 @@
                             </div>
                         </div>
                         <div class="mock-map-footer">
-                            <p><i class="fa-solid fa-circle-exclamation"></i> 매장 방문 전 네이버 지도로 현재 혼잡도를 확인하실 수 있습니다.</p>
+                            <p><i class="fa-solid fa-circle-exclamation"></i> <span data-i18n="map_footer_warning">매장 방문 전 네이버 지도로 현재 혼잡도를 확인하실 수 있습니다.</span></p>
                         </div>
                     </div>
                 </div>
@@ -870,8 +876,8 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="./assets/logo_horizontal.jpg" alt="제주 일번지 로고" class="footer-logo">
-                <p class="footer-quote">"제주를 그릴 위에 정성껏 담아 가맹점주와 함께 성장하는 든든한 일번지 브랜드가 되겠습니다."</p>
+                <img src="./assets/logo_horizontal.jpg" alt="제주 일번지 로고" class="footer-logo" id="footer-logo-img">
+                <p class="footer-quote" data-i18n="footer_quote">"제주를 그릴 위에 정성껏 담아 가맹점주와 함께 성장하는 든든한 일번지 브랜드가 되겠습니다."</p>
                 <div class="footer-sns">
                     <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook"></i></a>
@@ -881,25 +887,25 @@
             
             <div class="footer-links">
                 <div class="links-column">
-                    <h4>QUICK LINKS</h4>
+                    <h4 data-i18n="footer_col1_title">QUICK LINKS</h4>
                     <ul>
-                        <li><a href="#about">브랜드 스토리</a></li>
-                        <li><a href="#menu">메뉴 차림표</a></li>
-                        <li><a href="#location">찾아오시는 길</a></li>
+                        <li><a href="#about" data-i18n="nav_story">브랜드 스토리</a></li>
+                        <li><a href="#menu" data-i18n="nav_menu">메뉴 차림표</a></li>
+                        <li><a href="#location" data-i18n="nav_location">찾아오시는 길</a></li>
                     </ul>
                 </div>
                 <div class="links-column">
-                    <h4>FRANCHISE</h4>
+                    <h4 data-i18n="footer_col2_title">FRANCHISE</h4>
                     <ul>
-                        <li><a href="#franchise">가맹 성공 요인</a></li>
-                        <li><a href="#franchise">가맹 개설 문의</a></li>
-                        <li><a href="tel:0507-1399-1413">가맹 핫라인: 0507-1399-1413</a></li>
+                        <li><a href="#franchise" data-i18n="footer_franchise_factors">가맹 성공 요인</a></li>
+                        <li><a href="#franchise" data-i18n="nav_franchise">가맹 개설 문의</a></li>
+                        <li><a href="tel:0507-1399-1413"><span data-i18n="footer_hotline">가맹 상담 핫라인</span>: 0507-1399-1413</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 제주 일번지 1호 본점. All Rights Reserved. Designed for premium charcoal-grilled experience.</p>
+            <p data-i18n="footer_rights">&copy; 2026 제주 일번지. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -908,7 +914,7 @@
         <span class="lightbox-close" id="lightbox-close">&times;</span>
         <div class="lightbox-content-wrapper">
             <img class="lightbox-content" id="lightbox-img" alt="원본 메뉴판 크게 보기">
-            <div id="lightbox-caption">제주 일번지 매장 원본 메뉴판</div>
+            <div id="lightbox-caption" data-i18n="modal_lightbox_caption">제주 일번지 매장 원본 메뉴판</div>
         </div>
     </div>
 
@@ -918,10 +924,10 @@
             <div class="success-icon">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
-            <h3>가맹 문의 접수 완료</h3>
-            <p>제주 일번지 가맹상담 신청이 정상적으로 완료되었습니다.</p>
-            <p class="success-detail">작성해 주신 연락처로 본사 창업지원 팀장이 빠른 시일 내에 연락을 드리겠습니다. 제주 일번지를 선택해 주셔서 감사합니다.</p>
-            <button class="btn btn-primary btn-md" id="btn-success-close">닫기</button>
+            <h3 data-i18n="modal_success_title">가맹 문의 접수 완료</h3>
+            <p data-i18n="modal_success_desc1">제주 일번지 가맹상담 신청이 정상적으로 완료되었습니다.</p>
+            <p class="success-detail" data-i18n="modal_success_desc2">작성해 주신 연락처로 본사 창업지원 팀장이 빠른 시일 내에 연락을 드리겠습니다. 제주 일번지를 선택해 주셔서 감사합니다.</p>
+            <button class="btn btn-primary btn-md" id="btn-success-close" data-i18n="modal_success_close">닫기</button>
         </div>
     </div>
 
