@@ -70,6 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 3.5 See More Button for Mobile Menu
+    const btnMenuMore = document.getElementById('btn-menu-more');
+    const menuGrid = document.querySelector('.menu-grid');
+    const menuMoreWrapper = document.getElementById('menu-more-btn-wrapper');
+    
+    if (btnMenuMore && menuGrid && menuMoreWrapper) {
+        btnMenuMore.addEventListener('click', () => {
+            menuGrid.classList.remove('collapsed');
+            menuMoreWrapper.style.display = 'none';
+        });
+    }
+
     // 4. Menu Board Lightbox Modal
     const btnViewBoard = document.getElementById('btn-view-board');
     const lightboxModal = document.getElementById('lightbox-modal');

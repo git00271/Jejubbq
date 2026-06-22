@@ -49,6 +49,7 @@ const TRANSLATIONS = {
     tab_side: "사이드 식사",
     tab_drink: "주류 & 음료",
     btn_view_menu_board: "원본 매장 메뉴판 보기",
+    btn_menu_more: "더보기",
 
     // Pork single cuts
     pork_ogyeop_title: "제주 오겹살 <span class=\"badge badge-popular\">추천</span>",
@@ -220,6 +221,7 @@ const TRANSLATIONS = {
     tab_side: "Sides & Meals",
     tab_drink: "Alcohol & Drinks",
     btn_view_menu_board: "View Original Menu Board",
+    btn_menu_more: "See More",
 
     // Pork single cuts
     pork_ogyeop_title: "Jeju Skin-on Pork Belly <span class=\"badge badge-popular\">Recommended</span>",
@@ -391,6 +393,7 @@ const TRANSLATIONS = {
     tab_side: "サイドメニュー",
     tab_drink: "お酒・ドリンク",
     btn_view_menu_board: "全メニュー表の画像を見る",
+    btn_menu_more: "もっと見る",
 
     // Pork single cuts
     pork_ogyeop_title: "済州オギョプサル <span class=\"badge badge-popular\">おすすめ</span>",
@@ -562,6 +565,7 @@ const TRANSLATIONS = {
     tab_side: "主食&副食",
     tab_drink: "酒水饮料",
     btn_view_menu_board: "查看完整菜单大图",
+    btn_menu_more: "查看更多",
 
     // Pork single cuts
     pork_ogyeop_title: "济州带皮五花肉 <span class=\"badge badge-popular\">推荐</span>",
@@ -733,6 +737,7 @@ const TRANSLATIONS = {
     tab_side: "Закуски и супы",
     tab_drink: "Напитки и алкоголь",
     btn_view_menu_board: "Оригинальное меню ресторана",
+    btn_menu_more: "Показать еще",
 
     // Pork single cuts
     pork_ogyeop_title: "Огепсаль Чеджу <span class=\"badge badge-popular\">Рекомендуем</span>",
@@ -904,6 +909,7 @@ const TRANSLATIONS = {
     tab_side: "الوجبات الجانبية",
     tab_drink: "المشروبات والخمور",
     btn_view_menu_board: "عرض صورة القائمة بالكامل",
+    btn_menu_more: "عرض المزيد",
 
     // Pork single cuts
     pork_ogyeop_title: "أوجيوبسال جيجو <span class=\"badge badge-popular\">موصى به</span>",
