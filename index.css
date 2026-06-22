@@ -781,7 +781,7 @@ body.light-theme .lang-select-container {
 
 .visual-card {
     flex-grow: 1;
-    background-image: url('https://images.unsplash.com/photo-1608697138965-9f4b1ad7a545?auto=format&fit=crop&w=800&q=80');
+    background-image: url('./assets/storefront.jpg');
     background-size: cover;
     background-position: center;
     border-radius: var(--border-radius-lg);
