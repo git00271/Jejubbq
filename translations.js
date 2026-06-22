@@ -43,7 +43,7 @@ const TRANSLATIONS = {
     // Menu Section
     menu_tag: "SIGNATURE MENU",
     menu_title: "제주 일번지의 특별한 차림표",
-    menu_desc: "청정 제주 고기와 깊은 맛의 사이드 메뉴, 그리고 어울리는 반주까지 정성을 담아 대접합니다.",
+    menu_desc: "제주 일번지가 엄선한 최고급 고기 메뉴와 특수부위를 소개합니다.",
     tab_single: "제주 명품고기",
     tab_set: "세트 메뉴",
     tab_side: "사이드 식사",
@@ -214,7 +214,7 @@ const TRANSLATIONS = {
     // Menu Section
     menu_tag: "SIGNATURE MENU",
     menu_title: "Jeju Ilbeonji Curated Menu",
-    menu_desc: "We serve premium Jeju pork, flavorful sides, and matching local drinks prepared with sincere care.",
+    menu_desc: "Discover the premium pork and specialty meat cuts carefully selected by Jeju Ilbeonji.",
     tab_single: "Jeju Pork Cuts",
     tab_set: "Value Combo Sets",
     tab_side: "Sides & Meals",
@@ -898,7 +898,7 @@ const TRANSLATIONS = {
     // Menu Section
     menu_tag: "SIGNATURE MENU",
     menu_title: "قائمة جيجو إيلبيونجي",
-    menu_desc: "أجود قطع اللحم في جيجو والوجبات الجانبية الغنية بالأسعار المناسبة والأكثر أماناً.",
+    menu_desc: "أجود قطع اللحم والقطع الخاصة في جيجو المختارة بعناية.",
     tab_single: "لحوم جيجو الممتازة",
     tab_set: "مجموعات التوفير",
     tab_side: "الوجبات الجانبية",
