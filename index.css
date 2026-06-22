@@ -34,7 +34,7 @@
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
     
-    --glass-bg: rgba(30, 30, 30, 0.75);
+    --glass-bg: rgba(18, 18, 18, 0.85);
     --glass-border: rgba(255, 255, 255, 0.06);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     
@@ -260,7 +260,7 @@ input, select, textarea, button {
     width: 100%;
     height: var(--header-height);
     z-index: 1000;
-    background: rgba(18, 18, 18, 0.8);
+    background: var(--glass-bg);
     border-bottom: 1px solid var(--color-border);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -284,11 +284,18 @@ input, select, textarea, button {
     justify-content: space-between;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
 .header-logo {
     height: 48px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-normal);
+    /* Improve visibility of transparent logo on frosted glass */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .shrink .header-logo {
@@ -357,7 +364,7 @@ input, select, textarea, button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('./assets/hero_banner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -371,7 +378,7 @@ input, select, textarea, button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.6) 50%, rgba(18, 18, 18, 0.8) 100%);
+    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.75) 100%);
     z-index: 2;
 }
 
@@ -509,13 +516,17 @@ input, select, textarea, button {
     box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-logo-img {
     width: 100%;
+    max-width: 320px;
     height: auto;
     object-fit: contain;
-    border-radius: var(--border-radius-md);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
 }
 
 .about-badge {
@@ -800,8 +811,10 @@ input, select, textarea, button {
     background: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-md);
-    padding: 24px;
+    padding: 16px;
     display: flex;
+    gap: 16px;
+    align-items: center;
     transition: var(--transition-normal);
     position: relative;
     overflow: hidden;
@@ -813,47 +826,73 @@ input, select, textarea, button {
     box-shadow: var(--shadow-md);
 }
 
-.menu-item-info {
+/* Image Thumbnails inside Menu Cards */
+.menu-item-img-wrapper {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background-color: #222;
+}
+
+.menu-item-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.menu-item-card:hover .menu-item-img {
+    transform: scale(1.1);
+}
+
+.menu-item-info {
+    flex-grow: 1;
+    min-width: 0; /* Prevents overflow of child elements in flex container */
 }
 
 .menu-item-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 8px;
-    gap: 16px;
+    margin-bottom: 6px;
+    gap: 12px;
 }
 
 .menu-item-name {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--color-text-primary);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .menu-item-price {
     font-family: var(--font-num);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--color-primary);
     white-space: nowrap;
 }
 
 .menu-item-desc {
-    font-size: 1.45rem;
-    color: var(--color-text-muted);
+    font-size: 1.35rem;
+    color: var(--color-text-secondary);
     font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Custom badges for menu items */
 .badge {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    padding: 2px 8px;
+    padding: 1px 6px;
     border-radius: 4px;
     text-transform: uppercase;
 }
@@ -894,7 +933,12 @@ input, select, textarea, button {
 }
 
 .set-card .menu-item-name {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
+}
+
+.set-card .menu-item-desc {
+    white-space: normal;
+    text-overflow: clip;
 }
 
 .set-card .menu-item-desc strong {
@@ -903,7 +947,7 @@ input, select, textarea, button {
 }
 
 .desc-meta {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--color-text-muted);
     font-weight: 400;
 }
@@ -1242,18 +1286,18 @@ input, select, textarea, button {
     font-weight: 700;
 }
 
-.horizontal-road {
+.horizontal-road { /* 인주대로 */
     width: 100%;
-    height: 50px;
-    top: 50%;
+    height: 44px;
+    top: 65%;
     left: 0;
     transform: translateY(-50%);
 }
 
-.vertical-road {
-    width: 60px;
+.vertical-road { /* 독점로 */
+    width: 50px;
     height: 100%;
-    left: 60%;
+    left: 35%;
     top: 0;
 }
 
@@ -1269,30 +1313,39 @@ input, select, textarea, button {
     position: absolute;
 }
 
-.station-a {
-    top: 15%;
-    left: 10%;
+.station-a { /* 예술회관역 */
+    bottom: 12%;
+    left: 5%;
     border: 1px solid rgba(245, 158, 11, 0.3);
     color: var(--color-primary-light);
 }
 
-.station-b {
-    bottom: 15%;
-    left: 10%;
+.station-b { /* 석천사거리역 */
+    top: 12%;
+    right: 5%;
     border: 1px solid rgba(245, 158, 11, 0.3);
     color: var(--color-primary-light);
 }
 
-.area-landmark {
-    top: 15%;
+.landmark-cityhall { /* 인천시청역 */
+    top: 12%;
+    left: 5%;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--color-green);
+}
+
+.landmark-hospital { /* 가천대 길병원 */
+    top: 45%;
     right: 8%;
+    background: rgba(245, 158, 11, 0.05);
+    border: 1px dashed rgba(245, 158, 11, 0.4);
 }
 
 /* Map Pin & animation */
 .pin-wrapper {
     position: absolute;
-    top: calc(50% - 25px);
-    left: calc(60% + 5px); /* On the intersection block */
+    top: 45%;
+    left: 45%;
     transform: translate(-50%, -50%);
     z-index: 10;
 }
@@ -1400,6 +1453,7 @@ input, select, textarea, button {
     width: auto;
     align-self: flex-start;
     object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .footer-quote {
