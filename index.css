@@ -1264,122 +1264,207 @@ input, select, textarea, button {
 }
 
 .mock-map-visual {
-    height: 380px;
-    background-color: #2b2b2b;
-    background-image: 
-        radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0),
-        radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
+    height: 420px;
+    background-color: #1a1a1a;
     position: relative;
     overflow: hidden;
 }
 
-/* Road visuals on map */
-.road {
-    background: #3c3c3c;
+/* SVG Vector Map styling */
+.map-vector-svg {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Glowing Neon Lines styling */
+#glow-orange feGaussianBlur,
+#glow-blue feGaussianBlur {
+    animation: glow-pulse 3s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    0% { stdDeviation: 2; }
+    100% { stdDeviation: 4.5; }
+}
+
+/* Road labels styling */
+.map-road-label {
+    position: absolute;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 700;
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Subway Stations (Pill-shaped glassmorphic cards) */
+.landmark-station {
+    position: absolute;
+    background: rgba(22, 22, 22, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.landmark-station:hover {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -52%) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.station-icon-wrap {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.3);
-    font-weight: 700;
+    font-size: 0.9rem;
+    color: #dddddd;
 }
 
-.horizontal-road { /* 인주대로 */
-    width: 100%;
-    height: 44px;
-    top: 65%;
-    left: 0;
-    transform: translateY(-50%);
+.station-lines {
+    display: flex;
+    gap: 3px;
+    margin-left: 2px;
 }
 
-.vertical-road { /* 독점로 */
-    width: 50px;
-    height: 100%;
-    left: 35%;
-    top: 0;
+.line-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: none;
 }
 
-/* Landmark visual cues */
-.landmark {
-    background: #212121;
-    border: 1px dashed rgba(255, 255, 255, 0.1);
-    padding: 10px 14px;
-    border-radius: var(--border-radius-sm);
-    font-size: 1.2rem;
-    color: var(--color-text-muted);
-    text-align: center;
+.line-badge.ln-1 {
+    background: #0072bc; /* Incheon Line 1 Blue */
+}
+
+.line-badge.ln-2 {
+    background: #f59e0b; /* Incheon Line 2 Orange */
+}
+
+/* Major POI Landmark Cards (Glassmorphism & Interactive) */
+.landmark-poi {
     position: absolute;
+    background: rgba(28, 28, 28, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: default;
+    white-space: nowrap;
 }
 
-.station-a { /* 예술회관역 */
-    bottom: 12%;
-    left: 5%;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    color: var(--color-primary-light);
+.landmark-poi i {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s ease;
 }
 
-.station-b { /* 석천사거리역 */
-    top: 12%;
-    right: 5%;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    color: var(--color-primary-light);
+.landmark-poi:hover {
+    background: rgba(38, 38, 38, 0.95);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -53%) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+    color: #ffffff;
 }
 
-.landmark-cityhall { /* 인천시청역 */
-    top: 12%;
-    left: 5%;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: var(--color-green);
+/* Unique Icon Colors for major landmarks on hover */
+.landmark-poi.city-hall-building:hover i {
+    color: #10b981; /* Green */
+}
+.landmark-poi.gil-hospital:hover i,
+.landmark-poi.gil-medical-college:hover i {
+    color: #3b82f6; /* Blue */
+}
+.landmark-poi.starbucks:hover i {
+    color: #157347; /* Starbucks Green */
+}
+.landmark-poi.olive-young-poi:hover i {
+    color: #a3e635; /* Olive Young Lime */
+}
+.landmark-poi.ho-chicken:hover i {
+    color: #ef4444; /* Chicken Orange-Red */
+}
+.landmark-poi.guwol-middle:hover i,
+.landmark-poi.hillstate-apt:hover i {
+    color: #f59e0b; /* Amber */
 }
 
-.landmark-hospital { /* 가천대 길병원 */
-    top: 45%;
-    right: 8%;
-    background: rgba(245, 158, 11, 0.05);
-    border: 1px dashed rgba(245, 158, 11, 0.4);
-}
-
-/* Map Pin & animation */
+/* Pin for Jeju Ilbeonji */
 .pin-wrapper {
     position: absolute;
-    top: 45%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    transform: translate(-50%, -90%);
+    z-index: 20;
 }
 
 .map-pin {
-    width: 48px;
-    height: 48px;
-    background: var(--color-primary);
-    color: #121212;
+    width: 46px;
+    height: 46px;
+    background: #EF4444; /* Standard Red Map Pin color */
+    color: #FFFFFF;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.0rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    border: 2px solid var(--color-text-primary);
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    border: 2px solid #FFFFFF;
     cursor: pointer;
     animation: bounce-pin 2s infinite;
+    position: relative;
+    transition: all 0.2s ease;
 }
 
 .map-pin i {
-    transform: rotate(45deg); /* Counter-rotate icon */
+    transform: rotate(45deg);
 }
 
 .pulse-ring {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 11px;
+    left: 11px;
     width: 24px;
     height: 24px;
-    border: 3px solid var(--color-primary);
+    border: 3px solid #EF4444;
     border-radius: 50%;
     transform: scale(1);
     opacity: 1;
@@ -1389,18 +1474,18 @@ input, select, textarea, button {
 
 .pin-tooltip {
     position: absolute;
-    background: #121212;
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-primary);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    background: #EF4444;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: 800;
     white-space: nowrap;
-    top: -45px;
+    top: -46px;
     left: 50%;
-    transform: translateX(-50%) rotate(45deg); /* Re-correct rotation */
-    box-shadow: var(--shadow-md);
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 @keyframes bounce-pin {
@@ -1410,7 +1495,7 @@ input, select, textarea, button {
 
 @keyframes map-pulse {
     0% { transform: scale(0.6); opacity: 1; }
-    100% { transform: scale(2.4); opacity: 0; }
+    100% { transform: scale(2.6); opacity: 0; }
 }
 
 .mock-map-footer {

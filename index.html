@@ -719,22 +719,140 @@
                 <div class="location-map">
                     <div class="mock-map-box">
                         <div class="mock-map-header">
-                            <i class="fa-solid fa-location-dot" style="color: #F59E0B; margin-right: 8px;"></i>
-                            <span>인천 독점로 25 (제주 일번지 1호점)</span>
+                            <i class="fa-solid fa-location-dot" style="color: #EF4444; margin-right: 8px;"></i>
+                            <span>인천 남동구 독점로 25 (제주 일번지 1호점)</span>
                         </div>
                         <div class="mock-map-visual">
-                            <!-- Visual Landmark representation of coordinates -->
-                            <div class="landmark station-a">예술회관역<br>(인천1호선)</div>
-                            <div class="landmark station-b">석천사거리역<br>(인천2호선)</div>
-                            <div class="landmark landmark-cityhall">인천시청역<br>(1·2호선 환승)</div>
-                            <div class="landmark landmark-hospital">가천대 길병원</div>
-                            <div class="road horizontal-road">인주대로</div>
-                            <div class="road vertical-road">독점로</div>
-                            <div class="pin-wrapper">
+                            <!-- SVG Vector Map Layer (800x500 Coordinate System) -->
+                            <svg class="map-vector-svg" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background grid lines for a digital/premium feel -->
+                                <defs>
+                                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                                    </pattern>
+                                    <!-- Neon Glow Filters -->
+                                    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="3" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="3" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+                                
+                                <!-- Main Roads (Broad Gray Paths) -->
+                                <!-- 구월로 (Guwol-ro) -->
+                                <path d="M 0 80 L 800 80" stroke="#333333" stroke-width="44" stroke-linecap="square" fill="none" />
+                                <!-- 인주대로 (Inju-daero) -->
+                                <path d="M 0 420 L 800 420" stroke="#333333" stroke-width="44" stroke-linecap="square" fill="none" />
+                                <!-- 예술로 (Yesul-ro) -->
+                                <path d="M 80 0 L 80 500" stroke="#333333" stroke-width="36" stroke-linecap="square" fill="none" />
+                                <!-- 남동대로 (Namdong-daero) -->
+                                <path d="M 320 0 L 320 500" stroke="#333333" stroke-width="44" stroke-linecap="square" fill="none" />
+                                <!-- 독점로 (Dokjeom-ro) -->
+                                <path d="M 580 0 L 580 500" stroke="#2c2c2c" stroke-width="26" stroke-linecap="square" fill="none" />
+                                
+                                <!-- Sub Roads & Connecting Alleys -->
+                                <!-- 구월남로 (Guwolnam-ro) -->
+                                <path d="M 80 230 L 800 230" stroke="#262626" stroke-width="20" stroke-linecap="square" fill="none" />
+                                <!-- 올리브영/호치킨 골목 -->
+                                <path d="M 320 310 L 800 310" stroke="#262626" stroke-width="16" stroke-linecap="square" fill="none" />
+                                
+                                <!-- Inner Road Markings (Subtle dashed center lines) -->
+                                <path d="M 0 80 L 800 80" stroke="#555555" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+                                <path d="M 0 420 L 800 420" stroke="#555555" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+                                <path d="M 80 0 L 80 500" stroke="#555555" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+                                <path d="M 320 0 L 320 500" stroke="#555555" stroke-dasharray="10, 8" stroke-width="2" fill="none" />
+                                <path d="M 580 0 L 580 500" stroke="#444444" stroke-dasharray="8, 6" stroke-width="1" fill="none" />
+                                
+                                <!-- Subway Lines Overlay (Glow Neon) -->
+                                <!-- Incheon Subway Line 1 (Blue) -->
+                                <path d="M 80 0 L 80 500" stroke="#0072bc" stroke-width="4" fill="none" filter="url(#glow-blue)" />
+                                <!-- Incheon Subway Line 2 (Orange) -->
+                                <path d="M 0 80 L 800 80" stroke="#f59e0b" stroke-width="4" fill="none" filter="url(#glow-orange)" />
+                            </svg>
+                            
+                            <!-- Road Name Labels (Floated HTML text for responsiveness) -->
+                            <div class="map-road-label label-guwol-ro" style="top: 13%; left: 45%;">구월로 (인천2호선)</div>
+                            <div class="map-road-label label-inju-daero" style="top: 81%; left: 45%;">인주대로</div>
+                            <div class="map-road-label label-yesul-ro" style="top: 2%; left: 6%; transform: rotate(-90deg); transform-origin: left top;">예술로 (인천1호선)</div>
+                            <div class="map-road-label label-namdong-daero" style="top: 2%; left: 36.5%; transform: rotate(-90deg); transform-origin: left top;">남동대로</div>
+                            <div class="map-road-label label-dokjeom-ro" style="top: 2%; left: 69%; transform: rotate(-90deg); transform-origin: left top;">독점로</div>
+                            
+                            <!-- Subway Stations -->
+                            <div class="landmark-station city-hall" style="left: 10%; top: 16%;">
+                                <div class="station-icon-wrap"><i class="fa-solid fa-subway"></i></div>
+                                <span>인천시청역</span>
+                                <div class="station-lines">
+                                    <span class="line-badge ln-1">1</span>
+                                    <span class="line-badge ln-2">2</span>
+                                </div>
+                            </div>
+                            <div class="landmark-station seokcheon" style="left: 72.5%; top: 16%;">
+                                <div class="station-icon-wrap"><i class="fa-solid fa-subway"></i></div>
+                                <span>석천사거리역</span>
+                                <div class="station-lines">
+                                    <span class="line-badge ln-2">2</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Major Landmarks & POI Cards -->
+                            <div class="landmark-poi city-hall-building" style="left: 20%; top: 28%;">
+                                <i class="fa-solid fa-building-shield"></i> 인천광역시청
+                            </div>
+                            
+                            <div class="landmark-poi central-library" style="left: 12%; top: 48%;">
+                                <i class="fa-solid fa-book-open"></i> 중앙도서관
+                            </div>
+                            
+                            <div class="landmark-poi gwell-prugio" style="left: 22%; top: 52%;">
+                                <i class="fa-solid fa-building"></i> 지웰시티 푸르지오
+                            </div>
+                            
+                            <div class="landmark-poi gil-hospital" style="left: 48%; top: 72%;">
+                                <i class="fa-solid fa-hospital"></i> 가천대 길병원
+                            </div>
+                            
+                            <div class="landmark-poi gil-medical-college" style="left: 48%; top: 83%;">
+                                <i class="fa-solid fa-graduation-cap"></i> 가천대 의대
+                            </div>
+                            
+                            <div class="landmark-poi starbucks" style="left: 36.5%; top: 76%;">
+                                <i class="fa-solid fa-mug-hot"></i> 스타벅스
+                            </div>
+                            
+                            <div class="landmark-poi olive-young-poi" style="left: 58%; top: 56%;">
+                                <i class="fa-solid fa-basket-shopping"></i> 올리브영
+                            </div>
+                            
+                            <div class="landmark-poi ho-chicken" style="left: 65%; top: 56%;">
+                                <i class="fa-solid fa-utensils"></i> 호치킨
+                            </div>
+                            
+                            <div class="landmark-poi guwol-middle" style="left: 58%; top: 32%;">
+                                <i class="fa-solid fa-school"></i> 구월중학교
+                            </div>
+                            
+                            <div class="landmark-poi hillstate-apt" style="left: 77%; top: 36%;">
+                                <i class="fa-solid fa-house"></i> 힐스테이트 1단지
+                            </div>
+                            
+                            <div class="landmark-poi guwol-church" style="left: 81%; top: 72%;">
+                                <i class="fa-solid fa-church"></i> 구월1동교회
+                            </div>
+                            
+                            <div class="landmark-poi saemaul-bank" style="left: 66%; top: 88%;">
+                                <i class="fa-solid fa-wallet"></i> 새마을금고
+                            </div>
+                            
+                            <!-- Destination Pin for Jeju Ilbeonji -->
+                            <div class="pin-wrapper" style="left: 72.5%; top: 72%;">
                                 <div class="pulse-ring"></div>
                                 <div class="map-pin">
-                                    <i class="fa-solid fa-store"></i>
-                                    <div class="pin-tooltip">제주 일번지 1호 본점</div>
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <div class="pin-tooltip">제주 일번지</div>
                                 </div>
                             </div>
                         </div>
