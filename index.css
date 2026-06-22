@@ -293,13 +293,16 @@ input, select, textarea, button {
     height: 48px;
     width: auto;
     object-fit: contain;
+    background-color: #FFFFFF; /* White background to accommodate original JPG logo */
+    padding: 6px 14px;
+    border-radius: 50px; /* Rounded pill shape */
+    box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
-    /* Improve visibility of transparent logo on frosted glass */
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .shrink .header-logo {
-    height: 40px;
+    height: 38px;
+    padding: 4px 10px;
 }
 
 .nav-menu ul {
@@ -364,7 +367,7 @@ input, select, textarea, button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./assets/hero_banner.png');
+    background-image: url('./assets/hero_banner_stone.png'); /* Sizzling stone griddle image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -378,7 +381,7 @@ input, select, textarea, button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.75) 100%);
+    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.4) 50%, rgba(18, 18, 18, 0.7) 100%);
     z-index: 2;
 }
 
@@ -509,7 +512,7 @@ input, select, textarea, button {
 }
 
 .about-image-card {
-    background: var(--color-bg-surface);
+    background: #FFFFFF; /* Pure white background to match original logo background */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
     padding: 40px;
@@ -526,7 +529,6 @@ input, select, textarea, button {
     max-width: 320px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
 }
 
 .about-badge {
@@ -850,7 +852,7 @@ input, select, textarea, button {
 
 .menu-item-info {
     flex-grow: 1;
-    min-width: 0; /* Prevents overflow of child elements in flex container */
+    min-width: 0;
 }
 
 .menu-item-header {
@@ -1453,7 +1455,11 @@ input, select, textarea, button {
     width: auto;
     align-self: flex-start;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    background-color: #FFFFFF; /* White background to accommodate original JPG logo */
+    padding: 6px 14px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
 }
 
 .footer-quote {
@@ -1671,9 +1677,8 @@ input, select, textarea, button {
 
 /* 13. Responsive Adaptations (Media Queries) */
 @media (max-width: 1024px) {
-    /* Fonts scale down slightly */
     html {
-        font-size: 56.25%; /* 1rem = 9px */
+        font-size: 56.25%;
     }
     
     .hero-title {
@@ -1710,10 +1715,9 @@ input, select, textarea, button {
 
 @media (max-width: 768px) {
     html {
-        font-size: 50%; /* 1rem = 8px */
+        font-size: 50%;
     }
     
-    /* Navigation burger menu */
     .mobile-toggle {
         display: flex;
     }
@@ -1745,7 +1749,6 @@ input, select, textarea, button {
         font-size: 2.2rem;
     }
     
-    /* Burger icon transform when menu open */
     .mobile-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -1758,7 +1761,6 @@ input, select, textarea, button {
         transform: translateY(-8px) rotate(-45deg);
     }
     
-    /* Hero section */
     .hero-title {
         font-size: 4.2rem;
     }
@@ -1774,7 +1776,6 @@ input, select, textarea, button {
         margin: 0 auto;
     }
     
-    /* Menu section */
     .menu-grid {
         grid-template-columns: 1fr;
     }
@@ -1823,7 +1824,6 @@ input, select, textarea, button {
     transform: translateY(0);
 }
 
-/* Simple fade-in animations on load */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
